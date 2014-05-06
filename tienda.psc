@@ -9,7 +9,7 @@ Proceso TiendaProductos
 	Dimension producto[20]
 	Dimension cantidad[20]
 	Dimension precio[20]
-	top <- 0
+	top <- 1
 	Repetir
 		Escribir "Ingrese el producto"
 		Leer producto[top]
@@ -32,7 +32,7 @@ Proceso TiendaProductos
 	Escribir "Fecha de la compra ", fecha
 	Segun modopago Hacer
 		1:
-			Para a<-0 Hasta top Con Paso 1 Hacer
+			Para a<-1 Hasta top Con Paso 1 Hacer
 				total <- total + (cantidad[a] * precio[a])
 				subtotal <- cantidad[a] * precio[a]
 				Escribir "Producto ", producto[a] ,", cantidad ",cantidad[a],", precio(c/u) S/.", precio[a],", subtotal S/.",subtotal
@@ -43,7 +43,7 @@ Proceso TiendaProductos
 			Escribir "IGB(19%): S/.", igv
 			Escribir "Descuento: S/.0"
 		2:
-			Para a<-0 Hasta top Con Paso 1 Hacer
+			Para a<-1 Hasta top Con Paso 1 Hacer
 				total <- total + (cantidad[a] * precio[a])
 				subtotal <- cantidad[a] * precio[a]
 				Escribir "Producto ", producto[a] ,", cantidad ",cantidad[a],", precio(c/u) S/.", precio[a],", subtotal S/.",subtotal
@@ -56,7 +56,7 @@ Proceso TiendaProductos
 			Escribir "IGB(19%): S/.", igv
 			Escribir "Descuento: S/.", descuento
 		3:
-			Para a<-0 Hasta top Con Paso 1 Hacer
+			Para a<-1 Hasta top Con Paso 1 Hacer
 				total <- total + (cantidad[a] * precio[a])
 				subtotal <- cantidad[a] * precio[a]
 				Escribir "Producto ", producto[a] ,", cantidad ",cantidad[a],", precio(c/u) S/.", precio[a],", subtotal S/.",subtotal
@@ -68,9 +68,6 @@ Proceso TiendaProductos
 			Escribir "-------------------------------------------------------"
 			Escribir "IGB(19%): S/.", igv
 			Escribir "Descuento: S/.", descuento
-	Fin Segun
-	Escribir "Total a pagar: S/.", total
-	Escribir ""
-	Escribir "_______________________________________________________"
-	Escribir "            Autor - Jhon Achata Limachi :)"
-FinProceso
+		Fin Segun
+		Escribir "Total a pagar: S/.", total
+	FinProceso
